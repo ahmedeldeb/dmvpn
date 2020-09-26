@@ -16,3 +16,23 @@ interface loop 1
   no shutdown
 
  
+ip route 120.120.120.0 255.255.255.0 110.110.110.2
+
+ 
+ip route 130.130.130.0 255.255.255.0 110.110.110.2
+
+ 
+int tunnel 1
+ip add 192.168.200.1 255.255.255.0
+tunnel source 110.110.110.1
+tunnel mode gre multipoint
+ip nhrp network 111
+ip nhrp map multicast dynamic
+no ip split-horizon eigrp 100
+no ip next-hop-self eigrp 100
+exi
+Router eigrp 100
+No au
+Net 192.168.200.1 0.0.0.0
+Net 1.1.1.1 0.0.0.0
+Net 11.11.11.11 0.0.0.0
