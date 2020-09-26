@@ -1,0 +1,18 @@
+interface g0/1
+  description connect to Internet
+  ip add 110.110.110.1 255.255.255.0
+  no shutdown
+
+ 
+interface loop 0
+  description connect to network1
+  ip add 1.1.1.1 255.255.255.0
+  no shutdown
+
+ 
+interface loop 1
+  description connect to network2
+  ip add 11.11.11.11 255.255.255.0
+  no shutdown
+
+ 

@@ -1,0 +1,13 @@
+Router ,Interface,ip,subnetmask,description
+Internet,g0/1,110.110.110.2,255.255.255.0,connect to hup 
+Internet,g0/2,120.120.120.2,255.255.255.0,connect to spoke1 
+Internet,g0/3,130.130.130.2,255.255.255.0,connect to spoke2 
+Cbtme-Hub,g0/1,110.110.110.1,255.255.255.0,connect to Internet
+Cbtme-Hub,loop 0,1.1.1.1,255.255.255.0,connect to network1
+Cbtme-Hub,loop 1,11.11.11.11,255.255.255.0,connect to network2
+Cbtme-Spoke1,g0/2,120.120.120.1,255.255.255.0,connect to Internet
+Cbtme-Spoke1,loop 0,2.2.2.2,255.255.255.0,connect to network1
+Cbtme-Spoke1,loop 1,22.22.22.22,255.255.255.0,connect to network2
+Cbtme-Spoke2,g0/3,130.130.130.1,255.255.255.0,connect to Internet
+Cbtme-Spoke2,loop 0,3.3.3.3,255.255.255.0,connect to network1
+Cbtme-Spoke2,loop 1,33.33.33.33,255.255.255.0,connect to network2
